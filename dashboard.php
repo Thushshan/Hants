@@ -15,7 +15,7 @@
 												<?php #if($session->get_session('permission_staff')) { ?><span class="badge badge-pill badge-secondary">Stores</span> <?php #} ?>
 												<?php #if($session->get_session('permission_payments')) { ?><span class="badge badge-pill badge-secondary">Accounts</span> <?php #} ?>
 												<?php #if($session->get_session('permission_exams')) { ?><span class="badge badge-pill badge-secondary">Admin</span> <?php #} ?>
-												<?php #if($session->get_session('permission_courses')) { ?><span class="badge badge-pill badge-secondary"></span> <?php #} ?>
+												<?php #456if($session->get_session('permission_courses')) { ?><span class="badge badge-pill badge-secondary"></span> <?php #} ?>
 												<?php #if($session->get_session('permission_finance')) { ?><span class="badge badge-pill badge-secondary"></span> <?php #} ?>
 										</div>
                                         <div class="dashboard-username" style="float:right !important"><?php #date_default_timezone_set('Asia/Colombo'); echo date("Y-m-d h:i:s",time()); ?></div>
