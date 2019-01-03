@@ -143,7 +143,6 @@
                         <div class="row">
 							<div class="col-md-12">
 								<div class="card bg-light mb-3">
-									<div class="card-header">Sales Management</div>
 									<div class="card-body">
 										<div class="row">
 											<div class="col-md-3">
