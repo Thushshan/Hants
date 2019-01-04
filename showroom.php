@@ -11,7 +11,7 @@
 											<span class="badge badge-dark"><?php #echo ucwords($session->get_session('user_role')); ?> Staff</span>
 											<?php #if ($session->get_session('user_role') == 'staff') { ?>
 												<span class="badge badge-pill">for</span>
-												<?php #123if($session->get_session('permission_students')) { ?><span class="badge badge-pill badge-secondary">Showroom</span> <?php #} ?>
+												<?php #123if($session->get_session('permission_students')) { ?><span class="badge badge-pill badge-secondary">Show</span> <?php #} ?>
 												<?php #if($session->get_session('permission_staff')) { ?><span class="badge badge-pill badge-secondary">Stores</span> <?php #} ?>
 												<?php #if($session->get_session('permission_payments')) { ?><span class="badge badge-pill badge-secondary">Accounts</span> <?php #} ?>
 												<?php #if($session->get_session('permission_exams')) { ?><span class="badge badge-pill badge-secondary">Admin</span> <?php #} ?>

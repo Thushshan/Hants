@@ -48,14 +48,14 @@
 						<?php #if($session->get_session('permission_admin')) { ?>
 							<a href="admin.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("admin")) ? 'active' : '' ; echo $active_state; ?>">Admin</a>
 						<?php #} ?>
-						<?php #if($session->get_session('showroom')) { ?>
+						<?php #if($session->get_session('permission_showroom')) { ?>
 							<a href="showroom.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("staff")) ? 'active' : '' ; echo $active_state; ?>">Showroom</a>
 						<?php #} ?>
 						<?php #if($session->get_session('permission_stores')) { ?>
 							<a href="stores.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("stores")) ? 'active' : '' ; echo $active_state; ?>">Stores</a>
 						<?php #} ?>
-						<?php #if($session->get_session('permission_exams')) { ?>
-							<a href="exams.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("exams")) ? 'active' : '' ; echo $active_state; ?>">Accounts</a>
+						<?php #if($session->get_session('permission_accounts')) { ?>
+							<a href="accounts.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("accounts")) ? 'active' : '' ; echo $active_state; ?>">Accounts</a>
 						<?php #} ?>
 					
 					</div>
