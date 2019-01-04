@@ -30,7 +30,7 @@
 				<span class="navbar-nav mr-auto"></span>
 				<ul class="navbar-nav">
 					<li class="nav-item"><a href="profile.php" class="badge badge-pill badge-secondary" style="margin-top: 11px;margin-right: 12px;<?php /*echo (is_on_page("profile")) ? 'background-color: #d6d8db;' : '' ; ?>color: #343a40;"><?php echo $session->get_session('fname') . ' ' . $session->get_session('lname');*/ ?></a></li>
-					<li class="nav-item <?php #$active_state = (is_on_page("dashboard")) ? 'active' : '' ; echo $active_state; ?>"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+					<li class="nav-item <?php #$active_state = (is_on_page("admin")) ? 'active' : '' ; echo $active_state; ?>"><a class="nav-link" href="admin.php">Dashboard</a></li>
 					<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 				</ul>
 			</div>
@@ -48,11 +48,11 @@
 						<?php #if($session->get_session('permission_admin')) { ?>
 							<a href="admin.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("admin")) ? 'active' : '' ; echo $active_state; ?>">Admin</a>
 						<?php #} ?>
-						<?php #if($session->get_session('permission_staff')) { ?>
-							<a href="staff.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("staff")) ? 'active' : '' ; echo $active_state; ?>">Showroom</a>
+						<?php #if($session->get_session('showroom')) { ?>
+							<a href="showroom.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("staff")) ? 'active' : '' ; echo $active_state; ?>">Showroom</a>
 						<?php #} ?>
-						<?php #if($session->get_session('permission_payments')) { ?>
-							<a href="payments.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("payments")) ? 'active' : '' ; echo $active_state; ?>">Stores</a>
+						<?php #if($session->get_session('permission_stores')) { ?>
+							<a href="stores.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("stores")) ? 'active' : '' ; echo $active_state; ?>">Stores</a>
 						<?php #} ?>
 						<?php #if($session->get_session('permission_exams')) { ?>
 							<a href="exams.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("exams")) ? 'active' : '' ; echo $active_state; ?>">Accounts</a>
