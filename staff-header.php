@@ -45,8 +45,8 @@
 			<div class="row">
 				<div class="col-md-2">
 					<div class="list-group mb-5">
-						<?php #if($session->get_session('permission_students')) { ?>
-							<a href="students.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("students")) ? 'active' : '' ; echo $active_state; ?>">Admin</a>
+						<?php #if($session->get_session('permission_admin')) { ?>
+							<a href="admin.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("admin")) ? 'active' : '' ; echo $active_state; ?>">Admin</a>
 						<?php #} ?>
 						<?php #if($session->get_session('permission_staff')) { ?>
 							<a href="staff.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("staff")) ? 'active' : '' ; echo $active_state; ?>">Showroom</a>
