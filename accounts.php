@@ -9,14 +9,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3">
-							<div class="card mb-4 p-2">
-								<img class="card-img-top p-4" src="assets/images/search-exam.jpg" alt="Image">
-								<div class="card-body">
-									<a href="exam-search.php" class="btn btn-lg btn-dark btn-block">Search</a>
-								</div>
-							</div>
-						</div>
+						
 						<div class="col-md-3">
 							<div class="card mb-4 p-2">
 								<img class="card-img-top p-4" src="assets/images/schedule_exam.jpg" alt="Image">

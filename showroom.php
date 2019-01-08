@@ -74,7 +74,7 @@
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
 								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales quotation.png" alt="Image">
 								<div class="card-body">
-									<a href="Finance_Income_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Sales Quotations </a>
+									<a href="sales quotation.php" class="btn btn-lg btn-dark btn-block"> Sales Quotations </a>
 								</div>
 							</div>
 						</div>
