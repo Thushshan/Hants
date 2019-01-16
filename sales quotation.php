@@ -1,89 +1,37 @@
-<?php 
-	include_once 'staff-header.php';
-	#include_once 'DB_Connection.php';
-	  	      
-    		/*$sql_tot = "SELECT * FROM incomes";
-			$result_tot=mysqli_query($conn,$sql_tot);
-			$row_tot=mysqli_num_rows($result_tot);
-			
-			$sql_max= mysqli_query($conn,"SELECT MAX(id) AS maximum FROM incomes");
-			$result_max = mysqli_fetch_assoc($sql_max); 
-			$row_max = $result_max['maximum'];
-			$row_del = $row_max - $row_tot;
-			
-			$sql_close = "SELECT * FROM incomes where status='closed'";
-			$result_close=mysqli_query($conn,$sql_close);
-			$row_close=mysqli_num_rows($result_close);
-			
-			$sql_pen = "SELECT * FROM incomes where status='pending'";
-			$result_pen=mysqli_query($conn,$sql_pen);
-			$row_pen=mysqli_num_rows($result_pen);
-	
-	 */
-
-?>
-
-				<div class="col-md-10">                    
-					<div class="tab-content">
-						<div class="tab-pane mt-7 show active">
-                        	<div class="card bg-light mb-6">
-								<div class="card-header"></div>
-								<div class="card-body">
-							<ul class="ca-menu">
-                            
-                            
-                            
-                         <div class="col-md-15">
-                            <div class="topnav" align="right" >
-                            	
-                				<a class="active" href="sales_quotation" </a>
-                   						 <input type="text" placeholder="Search..">
-                			 </div>   
-               			 </div>
-                         </div>
-                            
-                            
-                            
-                           
-                           
-                                <div class="col-md-2">
-							<div class="card mb-2 p-2" style="background-color:#e2e8e5">
-								<div class="card-body">
-									<a href="Finance_Expense_Dashboard.php" class="btn btn-lg btn-dark btn-block"> NEW </a>
+<?php include_once 'staff-header.php'; ?>
+				<div class="col-md-10">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card bg-light mb-3">
+									<div class="card-body">
+										<div class="row">
+						<div class="col-md-2">
+							<div class="card mb-4 p-2" style="background-color: inherit; border-color: #f8f9fa; padding:0 !important;">
+								<div class="card-body btn-padding">
+									<div class="btn-group-vertical" role="group" aria-label="Basic example">
+  										<button type="button" class="btn btn-dark"> New Orders </button>
+  										<button type="button" class="btn btn-danger"> View Orders </button>
+									</div>
 								</div>
 							</div>
-						</div>		
-									
-							
-                            <div class="col-md-2">
-							<div class="card mb-2 p-2" style="background-color:#e2e8e5">
-								<div class="card-body">
-									<a href="Finance_Expense_Dashboard.php" class="btn btn-lg btn-dark btn-block"> VIEW </a>
-								</div>
-							</div>
-						</div>		
-                            
-                           </ul>
-                           
-                          
-                           
-                           
-                           
-                           
-                           
-                           
-                           
-                                </div>
-                                </div>
-                                </div>
 						</div>
-					</div>
-				</div>
-                
-                
-                
-                
-                
-                
-                
-<?php # include_once 'staff-footer.php'; ?>
+						<div class="col-md-2">
+						</div>
+                        <div class="col-md-4">
+						</div>
+						<div class="col-md-4">
+							<div class="card mb-4 p-2" style="background-color: inherit; border-color: #f8f9fa;">
+								<div class="card-body btn-padding">
+                                <form class="form-inline">
+  									<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Search">
+									<button type="submit" class="btn btn-primary mb-2">Search</button>
+								</form>
+								</div>
+							</div>
+						</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+<?php include_once 'staff-footer.php'; ?>

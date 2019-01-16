@@ -1,3 +1,7 @@
+.btn-padding{
+	padding: 0 !important;
+	}
+
 .dashboard-avatar {
 background: #383d41;
 width: 60px;
