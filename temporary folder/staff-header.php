@@ -55,7 +55,7 @@
 							<a href="stores.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("stores")) ? 'active' : '' ; echo $active_state; ?>">Stores</a>
 						<?php #} ?>
 						<?php #if($session->get_session('permission_accounts')) { ?>
-							<a href="accounts.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("accounts")) ? 'active' : '' ; echo $active_state; ?>">Accounts</a>
+							<a href="accounts-dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php #$active_state = (is_on_page("accounts")) ? 'active' : '' ; echo $active_state; ?>">Accounts</a>
 						<?php #} ?>
 					
 					</div>

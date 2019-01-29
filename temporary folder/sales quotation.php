@@ -11,6 +11,8 @@
 									<div class="btn-group-vertical" role="group" aria-label="Basic example">
   										<button type="button" class="btn btn-dark"> New Orders </button>
   										<button type="button" class="btn btn-danger"> View Orders </button>
+                                        <button type="button" class="btn btn-dark"> Vat Print</button>
+                                        <button type="button" class="btn btn-dark"> Non Vat Print</button>
 									</div>
 								</div>
 							</div>
