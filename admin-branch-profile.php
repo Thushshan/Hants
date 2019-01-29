@@ -65,7 +65,7 @@ array_push($department,'Administration','Showroom','Store','Accounts');
 													<option value="Administration" selected>Administration</option>
 													<option value="Store">Store</option>
 													<option value="Accounts">Accounts</option>
-													<option value="Showroom">Showroomq</option>
+													<option value="Showroom">Showroom</option>
                                                 </select>
 											</div>
 										</div>
