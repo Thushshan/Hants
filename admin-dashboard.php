@@ -37,7 +37,7 @@
 											</div>
 											<div class="col-md-3">
 												<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-													<img height="250" width="200" class="card-img-top p-4" src="assets/images/businessman.png" alt="Image">
+													<img height="250" width="200" class="card-img-top p-4" src="assets/images/manage-branch.png" alt="Image">
 													<div class="card-body">
 														<a href="admin-branch-add.php" class="btn btn-lg btn-dark btn-block"> Manage Branches </a>
 													</div>
@@ -45,7 +45,7 @@
 											</div>
 											<div class="col-md-3">
 												<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-													<img height="250" width="200" class="card-img-top p-4" src="assets/images/businessman.png" alt="Image">
+													<img height="250" width="200" class="card-img-top p-4" src="assets/images/manage-department.png" alt="Image">
 													<div class="card-body">
 														<a href="admin-manage-departments.php" class="btn btn-lg btn-dark btn-block"> Departments </a>
 													</div>

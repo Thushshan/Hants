@@ -24,7 +24,7 @@
                         <div class="row">
 						<div class="col-md-3">
 							<div class="card mb-4 p-2">
-								<img height="250" width="200" class="card-img-top p-4" src="assets/images/item list.png" alt="Image">
+								<img height="250" width="200" class="card-img-top p-4" src="assets/images/item-list.png" alt="Image">
 								<div class="card-body">
 									<a href="exam-add.php" class="btn btn-lg btn-dark btn-block">Item List</a>
 								</div>
@@ -33,7 +33,7 @@
 						
 						<div class="col-md-3">
 							<div class="card mb-4 p-2">
-								<img height="250" width="200" class="card-img-top p-4" src="assets/images/customer list.png" alt="Image">
+								<img height="250" width="200" class="card-img-top p-4" src="assets/images/customer-list.png" alt="Image">
 								<div class="card-body">
 									<a href="exam-schedule.php" class="btn btn-lg btn-dark btn-block">Customer List</a>
 								</div>
@@ -49,7 +49,7 @@
 						</div>
 						<div class="col-md-3">
 							<div class="card mb-4 p-2">
-								<img height="250" width="200" class="card-img-top p-4" src="assets/images/exam_reports.jpg" alt="Image">
+								<img height="250" width="200" class="card-img-top p-4" src="assets/images/reports.png" alt="Image">
 								<div class="card-body">
 									<a href="exam-reports.php" class="btn btn-lg btn-dark btn-block">Reports</a>
 								</div>

@@ -69,7 +69,7 @@
 										<div class="row">
 											<div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales quotation.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales-quotes.png" alt="Image">
 								<div class="card-body">
 									<a href="sales quotation.php" class="btn btn-lg btn-dark btn-block"> Sales Quotations </a>
 								</div>
@@ -77,7 +77,7 @@
 						</div>
 						<div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales order.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales-order.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Expense_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Sales Orders </a>
 								</div>
@@ -85,7 +85,7 @@
 						</div>
 						<div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales invoices.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales-invoice.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Payroll_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Sales Invoices </a>
 								</div>
@@ -93,7 +93,7 @@
 						</div>
                         <div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/branch request note.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/branch-request-note.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Leave_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Branch Request Notes </a>
 								</div>
@@ -101,7 +101,7 @@
 						</div>
                         <div class="col-md-3" >
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales return order.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales-return.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Bank_Accounts_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Sales Return Orders </a>
 								</div>
@@ -109,7 +109,7 @@
 						</div>
                         <div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales receipts.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/sales-receipts.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Payroll_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Sales Reciepts </a>
 								</div>
@@ -117,7 +117,7 @@
 						</div>
                         <div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/branch request note.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/credit-memo.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Leave_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Credit Memos </a>
 								</div>
@@ -125,7 +125,7 @@
 						</div>
                         <div class="col-md-3" >
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/reports2.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/reports.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Bank_Accounts_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Reports </a>
 								</div>
@@ -144,7 +144,7 @@
 										<div class="row">
 											<div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/customer list.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/customer-list.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Income_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Customer List </a>
 								</div>
@@ -152,7 +152,7 @@
 						</div>
 						<div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/item list.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/item-list.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Expense_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Item List </a>
 								</div>
@@ -160,7 +160,7 @@
 						</div>
                         <div class="col-md-3">
 							<div class="card mb-4 p-2" style="background-color:#e2e8e5">
-								<img height="270" width="130" class="card-img-top p-4" src="assets/images/posted documents.png" alt="Image">
+								<img height="270" width="130" class="card-img-top p-4" src="assets/images/posted-documents.png" alt="Image">
 								<div class="card-body">
 									<a href="Finance_Payroll_Dashboard.php" class="btn btn-lg btn-dark btn-block"> Posted Documents </a>
 								</div>
