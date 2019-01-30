@@ -4,21 +4,18 @@
 						<div class="col-md-12">
 							<div class="card mb-4 p-2">
 								<div class="row">
-									<div class="col-1"><span class="dashboard-avatar"><?php #echo substr($session->get_session('fname'), 0,1); ?></span></div>
+									<div class="col-1"><span class="dashboard-avatar"><?php echo substr($session->get_session('firstname'), 0,1); ?></span></div>
 									<div class="col-11">
-										<div class="dashboard-username"><?php #echo $session->get_session('fname') . " " . $session->get_session('lname'); ?></div>
+										<div class="dashboard-username"><?php echo $session->get_session('firstname') . " " . $session->get_session('lastname'); ?></div>
 										<div class="dashboard-department">
-											<span class="badge badge-dark"><?php #echo ucwords($session->get_session('user_role')); ?> Staff</span>
-											<?php #if ($session->get_session('user_role') == 'staff') { ?>
+											<span class="badge badge-dark"> Staff Member </span>
 												<span class="badge badge-pill">for</span>
-												<?php #123if($session->get_session('permission_students')) { ?><span class="badge badge-pill badge-secondary">Showroom</span> <?php #} ?>
-												<?php #if($session->get_session('permission_staff')) { ?><span class="badge badge-pill badge-secondary">Stores</span> <?php #} ?>
-												<?php #if($session->get_session('permission_payments')) { ?><span class="badge badge-pill badge-secondary">Accounts</span> <?php #} ?>
-												<?php #if($session->get_session('permission_exams')) { ?><span class="badge badge-pill badge-secondary">Admin</span> <?php #} ?>
-												<?php #456if($session->get_session('permission_courses')) { ?><span class="badge badge-pill badge-secondary"></span> <?php #} ?>
-												<?php #if($session->get_session('permission_finance')) { ?><span class="badge badge-pill badge-secondary"></span> <?php #} ?>
+												<?php if($session->get_session('permission_admin')) { ?><span class="badge badge-pill badge-secondary"> Administration </span> <?php } ?>
+												<?php if($session->get_session('permission_store')) { ?><span class="badge badge-pill badge-secondary"> Stores </span> <?php } ?>
+												<?php if($session->get_session('permission_accounts')) { ?><span class="badge badge-pill badge-secondary"> Accounts </span> <?php } ?>
+												<?php if($session->get_session('permission_showroom')) { ?><span class="badge badge-pill badge-secondary"> Showroom </span> <?php } ?>
+												<?php if($session->get_session('permission_employees')) { ?><span class="badge badge-pill badge-secondary"> Employee </span> <?php } ?>
 										</div>
-                                        <div class="dashboard-username" style="float:right !important"><?php #date_default_timezone_set('Asia/Colombo'); echo date("Y-m-d h:i:s",time()); ?></div>
 									</div>
 								</div>
 							</div>
