@@ -17,8 +17,41 @@
 		else{
 			return "closed";
 		}
-	
 	}
+	
+	function change_status($status){
+		if($status == "active"){
+			return " &nbsp;"." Block "."&nbsp;";
+		}
+		else{
+			return "Unblock";
+		}
+	}
+
+	if(isset($_POST['block'])){
+		$BranchManager = new BranchManager();
+		$block_status = $BranchManager->block_branch($_POST['id']);
+
+		if ($block_status) {
+			set_success_msg("<strong>Success!</strong> Branch Location has been successfully blocked!");
+		} else {
+			set_error_msg("<strong>Failed!</strong> Something strange happened while trying to block the location!..");
+		}
+		header('Location: admin-branch-permit.php');
+	}
+	
+	if(isset($_POST['unblock'])){
+		$BranchManager = new BranchManager();
+		$block_status = $BranchManager->unblock_branch($_POST['id']);
+
+		if ($block_status) {
+			set_success_msg("<strong>Success!</strong> Branch Location has been successfully unblocked!");
+		} else {
+			set_error_msg("<strong>Failed!</strong> Something strange happened while trying to unblock the location!..");
+		}
+		header('Location: admin-branch-permit.php');
+	}
+	
 ?>
 				<div class="col-md-10">
 					<nav>
@@ -29,15 +62,15 @@
 							$row = mysqli_num_rows($result);
 							?>
 							<a href="admin-branch-add.php" class="nav-item nav-link"><strong> Add Branch </strong></a>
-							<a href="admin-branch-search.php" class="nav-item nav-link active"><strong> Search Branch 
+							<a href="admin-branch-search.php" class="nav-item nav-link"><strong> Search Branch 
 							<?php if($row > 0){
-									echo "<span class='badge badge-success badge-pill'> ".$row." <span>";
+									echo "<span class='badge badge-danger badge-pill'> ".$row." <span>";
 								  } 
 							?>
 							</strong></a>
-							<a href="admin-branch-permit.php" class="nav-item nav-link"><strong> Permit Branch 
+							<a href="admin-branch-permit.php" class="nav-item nav-link active"><strong> Permit Branch 
 							<?php if($row > 0){
-									echo "<span class='badge badge-danger badge-pill'> ".$row." <span>";
+									echo "<span class='badge badge-success badge-pill'> ".$row." <span>";
 								  } 
 							?>
 							</strong></a>
@@ -85,8 +118,9 @@
 													<th class="<?php echo check_status($singlebranch['status']); ?>"><?php echo $singlebranch['status']; ?></th>
 													<td>
 														<div class="btn-group" role="group" aria-label="Basic example">
-															<form action="admin-branch-profile.php" method="get">
-																<button name="bid" value="<?php echo $singlebranch['id']; ?>" type="submit" class="btn btn-dark">View Location</button>
+															<form action="admin-branch-permit.php" method="post">
+																<input type="hidden" value="<?php echo $singlebranch['id']; ?>" name="id">
+																<button name="<?php echo (check_status($singlebranch['status'])=="pending")? "block": "unblock"; ?>" type="submit" class="btn <?php echo (check_status($singlebranch['status'])=="pending")? "btn-danger": "btn-success"; ?>"><?php echo change_status($singlebranch['status']); ?></button>
 															</form>
 														</div>
 													</td>

@@ -51,13 +51,23 @@
 		} else {
 			set_error_msg("<strong>Failed!</strong> Something strange happened while trying to delete department!");
 		}
-		header('Location: staff-departments.php');
+		header('Location: admin-manage-departments.php');
 	}
 ?>
 				<div class="col-md-10">
 					<nav>
 						<div class="nav nav-tabs" id="nav-tab" role="tablist">
-							<a href="staff-departments.php" class="nav-item nav-link active">Departments</a>
+							<?php
+                            $sql = "SELECT * FROM departments";
+							$result = Database::$DB_CONN->query($sql);
+							$row = mysqli_num_rows($result);
+							?>
+							<a href="admin-manage-departments.php" class="nav-item nav-link active"><strong> Departments 
+							<?php if($row > 0){
+									echo "<span class='badge badge-success badge-pill'> ".($row - 1)." <span>";
+								  } 
+							?>
+							</strong></a>
 						</div>
 					</nav>
 					<div class="tab-content">
