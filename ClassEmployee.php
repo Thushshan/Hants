@@ -11,6 +11,7 @@
 *	AuthHandler		- User authentication handler 
 *	Helpers			- Helper methods
 *	Database 		- Database connection
+*
 *	=============================================
 * 	               CLASS STRUCTURE
 *	=============================================
@@ -52,8 +53,8 @@ class BranchManager extends Database {
 	
 	public function add_branch($branchname, $deparmenttype, $address, $telno) {
 
-		$sql_user = "INSERT INTO company_branches (name, type, location, phoneno)
-				VALUES ('$branchname', '$deparmenttype', '$address', '$telno')";
+		$sql_user = "INSERT INTO company_branches (name, type, location, phoneno, status)
+				VALUES ('$branchname', '$deparmenttype', '$address', '$telno', 'active')";
 		if (Database::$DB_CONN->query($sql_user)) {
 		    return true;
 		} else {
@@ -64,7 +65,7 @@ class BranchManager extends Database {
 	
 	public function get_branch_list()	{
 		$branch = array();
-		$result = Database::$DB_CONN->query("SELECT * FROM company_branches");
+		$result = Database::$DB_CONN->query("SELECT * FROM company_branches order by status desc");
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
 				array_push($branch, array(
@@ -73,6 +74,7 @@ class BranchManager extends Database {
 					'type' => $row['type'],
 					'location' => $row['location'],
 					'phoneno' => $row['phoneno'],
+					'status' => $row['status'],
 				));
 			}
 		} else {
@@ -83,8 +85,7 @@ class BranchManager extends Database {
 	
 	public function get_single_branch($branchid) {
 		$branch = array();
-		$result = Database::$DB_CONN->query("SELECT * FROM company_branches WHERE id='$branchid'
-		");
+		$result = Database::$DB_CONN->query("SELECT * FROM company_branches WHERE id='$branchid' order by status desc");
 		if ($result->num_rows != 0) {
 			while($row = $result->fetch_assoc()) {
 				
@@ -94,6 +95,7 @@ class BranchManager extends Database {
 					'type' => $row['type'],
 					'location' => $row['location'],					
 					'phoneno' => $row['phoneno'],
+					'status' => $row['status'],
 				));
 				break;
 			}
@@ -102,6 +104,58 @@ class BranchManager extends Database {
 			return null;
 		}
 		return $branch;
+	}
+	
+	public function update_branch($bid, $name, $type, $location, $telno) {
+
+		$sql = "UPDATE company_branches SET name='$name', type='$type', location='$location', phoneno='$telno' WHERE id='$bid'";
+		if (Database::$DB_CONN->query($sql)) {
+			$status_progress = 1;
+		} else {
+			$status_progress = 0;
+			echo "Error updating record: " . Database::$DB_CONN->error;
+		}
+
+		return $status_progress;
+	}
+	
+	public function delete_branch($bid) {
+
+		$sql = "DELETE FROM company_branches WHERE id='$bid'";
+		if (Database::$DB_CONN->query($sql)) {
+			$status_progress = 1;
+		} else {
+			$status_progress = 0;
+			echo "Error deleting record: " . Database::$DB_CONN->error;
+		}
+
+		return $status_progress;
+	}
+	
+	public function block_branch($bid) {
+
+		$sql = "UPDATE company_branches SET status='inactive' WHERE id='$bid'";
+		if (Database::$DB_CONN->query($sql)) {
+			$status_progress = 1;
+		} else {
+			$status_progress = 0;
+			echo "Error blocking record: " . Database::$DB_CONN->error;
+		}
+
+		return $status_progress;
+	}
+	
+	public function unblock_branch($bid) {
+
+		$sql = "UPDATE company_branches SET status='active' WHERE id='$bid'";
+		if (Database::$DB_CONN->query($sql)) {
+			$status_progress = 1;
+		} else {
+			$status_progress = 0;
+			echo "Error blocking record: " . Database::$DB_CONN->error;
+		}
+
+		return $status_progress;
 	}
 }
 
@@ -118,7 +172,7 @@ class StaffManager extends Database {
 	public function get_single_employee($userid) {
 		$user = array();
 		$result = Database::$DB_CONN->query("
-			SELECT id, userid, username, firstname, lastname, gender, dob, mobileno, email, nicno, location, password, reg_date, salary, status, last_seen FROM employees
+			SELECT * FROM employees
 			WHERE userid='$userid'
 		");
 		if ($result->num_rows != 0) {

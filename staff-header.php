@@ -48,13 +48,13 @@
 							<a href="admin-dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("adminstration")) ? 'active' : '' ; echo $active_state; ?>"> Administration </a>
 						<?php } ?>
 						<?php if($session->get_session('permission_store')) { ?>
-							<a href="Finance_Dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("stores")) ? 'active' : '' ; echo $active_state; ?>"> Stores </a>
+							<a href="stores-dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("stores")) ? 'active' : '' ; echo $active_state; ?>"> Stores </a>
 						<?php } ?>
 						<?php if($session->get_session('permission_accounts')) { ?>
-							<a href="payments.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("accounts")) ? 'active' : '' ; echo $active_state; ?>"> Accounts </a>
+							<a href="accounts-dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("accounts")) ? 'active' : '' ; echo $active_state; ?>"> Accounts </a>
 						<?php } ?>
 						<?php if($session->get_session('permission_showroom')) { ?>
-							<a href="exams.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("showroom")) ? 'active' : '' ; echo $active_state; ?>"> Showroom </a>
+							<a href="showroom-dashboard.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("showroom")) ? 'active' : '' ; echo $active_state; ?>"> Showroom </a>
 						<?php } ?>
 						<?php if(true /* $session->get_session('permission_employees') */ ) { ?>
 							<a href="profile.php" class="list-group-item list-group-item-action list-group-item-secondary <?php $active_state = (is_on_page("profile")) ? 'active' : '' ; echo $active_state; ?>">Profile</a>

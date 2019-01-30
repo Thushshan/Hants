@@ -205,8 +205,7 @@
 										</div>
 									</div>
 								</fieldset>
-								<div class="form-group row mt-5">
-                                    <div class="col-sm-2"></div>
+								<div class="form-group row mt-5"> 
                                     <div class="col-sm-2">
                                         <button type="submit" name="e" value="1" class="btn btn-dark">Update Profile</button>
                                     </div>

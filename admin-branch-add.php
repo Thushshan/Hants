@@ -24,12 +24,24 @@
 				<div class="col-md-10">
 					<nav>
 						<div class="nav nav-tabs" id="nav-tab" role="tablist">
-							<a href="admin-branch-add.php" class="nav-item nav-link active">Add</a>
-							<a href="admin-branch-search.php" class="nav-item nav-link disabled">Search</a>
-							<a href="staff-attendance.php" class="nav-item nav-link disabled">Attendance</a>
-							<a href="staff-departments.php" class="nav-item nav-link disabled">Departments</a>
-							<a href="staff-overview.php" class="nav-item nav-link disabled">Overview</a>
-							<a href="staff-reports.php" class="nav-item nav-link disabled">Reports</a>
+							<?php
+                            $sql = "SELECT * FROM company_branches";
+							$result = Database::$DB_CONN->query($sql);
+							$row = mysqli_num_rows($result);
+							?>
+							<a href="admin-branch-add.php" class="nav-item nav-link active"><strong> Add Branch </strong></a>
+							<a href="admin-branch-search.php" class="nav-item nav-link"><strong> Search Branch 
+							<?php if($row > 0){
+									echo "<span class='badge badge-danger badge-pill'> ".$row." <span>";
+								  } 
+							?>
+							</strong></a>
+							<a href="admin-branch-permit.php" class="nav-item nav-link"><strong> Permit Branch 
+							<?php if($row > 0){
+									echo "<span class='badge badge-danger badge-pill'> ".$row." <span>";
+								  } 
+							?>
+							</strong></a>
 						</div>
 					</nav>
 					<div class="tab-content">
